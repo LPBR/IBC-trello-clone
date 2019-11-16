@@ -1,0 +1,10 @@
+<div class='board-bar'>
+  <%= hidden_field_tag 'id', @board.id %>
+  <h1><%= @board.name %></h1>
+  <%= link_to @board, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
+    fas_icon 'trash'
+  end %>
+</div>
+<div class='board-show'>
+  
+</div>

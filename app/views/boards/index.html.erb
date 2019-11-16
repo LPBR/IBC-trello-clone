@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="boards">
+    <h1><%= fas_icon 'chalkboard' %> Boards Pessoais</h1>
+
+    <div class="boards-list row">
+    <% @boards.each do |board| %>
+      <%= render 'board', board: board %>
+    <% end %>
+    </div>
+  </div>
+</div>

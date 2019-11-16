@@ -1,0 +1,10 @@
+<div class='board col-3'>
+  <div class='board-content'>
+    <%= link_to board do %>
+      <h2><%= board.name %></h2>
+    <% end %>
+  </div>
+  <%= link_to board, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
+    fas_icon 'trash'
+  end %>
+</div>
