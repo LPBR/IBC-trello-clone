@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_15_040505) do
+ActiveRecord::Schema.define(version: 2019_11_16_120429) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "board_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_steps_on_board_id"
   end
 
 end
