@@ -1,0 +1,66 @@
+// Place all the styles related to the Boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.boards {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .boards-list {
+    margin-top: 1.5rem;
+  }
+}
+.board {
+  margin: 0 auto 1rem auto;
+  max-width: 280px;
+  .board-content {
+    background-color: #f2f2f2;
+    padding: .5rem;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px lightgray;
+    &:hover {
+      box-shadow: 1px 2px 2px 2px lightgray;
+    }
+    a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+    h2 {
+      color: black;
+      font-weight: bold;
+    }
+  }
+  .delete {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
+}
+.board-bar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: .5rem auto;
+  h1 {
+    cursor: pointer;
+  }
+  .delete {
+    color: black;
+    &:hover {
+      color: red;
+    }
+    i {
+      vertical-align: sub;
+    }
+  }
+}
+.board-show {
+  background: #f2f2f2;
+  height: calc(100vh - 117px);
+}

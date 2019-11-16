@@ -1,0 +1,4 @@
+$('.board-bar h1').replaceWith("<%= escape_javascript(render 'boards/edit') %>");
+$('.board-bar input').focusout(function () {
+  $('.board-bar form').submit();
+});
