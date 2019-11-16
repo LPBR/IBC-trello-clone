@@ -1,0 +1,6 @@
+var addStep = $('.add-step').clone(true);
+$('.add-step').replaceWith("<%= escape_javascript(render 'steps/new') %>");
+$('#step_name').focus();
+$('#step-close').click(function (event) {
+  $(event.currentTarget).parents('.step-body').replaceWith(addStep);
+});

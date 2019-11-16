@@ -1,0 +1,12 @@
+<div class='step-body'>
+  <div class='step-form'>
+    <%= form_for @step do |form| %>
+      <%= form.hidden_field :board_id %>
+      <%= form.text_field :name, { placeholder: 'Insira o nome da etapa...' } %>
+      <button id='step-close' type='button' class='close'>
+        <span aria-hidden='true'>&times;</span>
+      </button>
+      <%= form.submit 'Adicionar Etapa', class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>
