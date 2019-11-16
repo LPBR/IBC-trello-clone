@@ -1,0 +1,13 @@
+<div class='step col-3' id="<%= id %>">
+  <div class='step-body'>
+    <div class='step-title'>
+      <h2><%= step.name %></h2>
+      <%= link_to step, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
+        fas_icon 'trash'
+      end %>
+    </div>
+    <div class='step-content'>
+
+    </div>
+  </div>
+</div>

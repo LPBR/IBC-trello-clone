@@ -1,0 +1,4 @@
+$('#step_<%= @step.id %> h2').replaceWith("<%= escape_javascript(render 'steps/edit') %>");
+$('#step_<%= @step.id %> input').focusout(function () {
+  $('#step_<%= @step.id %> form').submit();
+});

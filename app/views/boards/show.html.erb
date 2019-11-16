@@ -1,10 +1,20 @@
-<div class='board-bar'>
-  <%= hidden_field_tag 'id', @board.id %>
-  <h1><%= @board.name %></h1>
-  <%= link_to @board, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
-    fas_icon 'trash'
-  end %>
-</div>
 <div class='board-show'>
-  
+  <div class='board-bar'>
+    <%= hidden_field_tag 'id', @board.id %>
+    <h1><%= @board.name %></h1>
+    <%= link_to @board, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
+      fas_icon 'trash'
+    end %>
+  </div>
+  <div class='steps-container row' data-url="<%= sort_steps_path %>">
+    <% @board.steps.order(:position).each do |step| %>
+      <%= render partial: '/steps/show', object: step, as: 'step', locals: { id: dom_id(step) } %>
+    <% end %>
+    <div class='step col-3'>
+      <div class="add-step">
+        <%= fas_icon 'plus' %>
+        Adicionar uma Etapa
+      </div>
+    </div>
+  </div>
 </div>
