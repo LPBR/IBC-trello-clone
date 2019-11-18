@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
+  factory :task do
+    content { 'Task 1' }
+    step { create(:random_step) }
+  end
+
+  factory :random_task, class: Task do
+    content { Faker::Educator.course_name }
+    step { create(:random_step) }
+  end
+
   factory :step do
     name { 'To Do' }
     board { create(:random_board) }

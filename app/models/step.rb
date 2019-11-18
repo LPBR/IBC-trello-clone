@@ -3,6 +3,7 @@
 # Step Class Model
 class Step < ApplicationRecord
   belongs_to :board
+  has_many :tasks, dependent: :destroy
 
   before_create :set_initial_step_position
 
