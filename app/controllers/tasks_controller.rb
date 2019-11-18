@@ -58,7 +58,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to @task.step.board, notice: 'Tarefa removida com sucesso.' }
+      format.html { redirect_to @task.step.board, alert: { success: 'Tarefa removida com sucesso.' } }
     end
   end
 
