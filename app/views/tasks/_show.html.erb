@@ -1,0 +1,6 @@
+<div class='task' id="<%= id %>">
+  <p><%= task.content %></p>
+  <%= link_to task, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'delete' do 
+    fas_icon 'trash'
+  end %>
+</div>
