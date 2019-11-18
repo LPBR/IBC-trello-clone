@@ -6,4 +6,12 @@ class Task < ApplicationRecord
 
   validates :content, presence: true
   validates :step, presence: true
+
+  private
+
+  def set_initial_task_position
+    last_task = Task.where(step_id: step_id).order(:position).last
+    self.position = 0 if last_task.nil?
+    self.position = last_task.position + 1 unless last_task.nil?
+  end
 end

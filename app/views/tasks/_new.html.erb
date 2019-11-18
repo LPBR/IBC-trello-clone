@@ -1,0 +1,12 @@
+<div class='task'>
+  <div class='task-form'>
+    <%= form_for @task do |form| %>
+      <%= form.hidden_field :step_id %>
+      <%= form.text_field :content, { placeholder: 'Insira o conteúdo desta tarefa...' } %>
+      <button id='task-close' type='button' class='close'>
+        <span aria-hidden='true'>&times;</span>
+      </button>
+      <%= form.submit 'Adicionar Tarefa', class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

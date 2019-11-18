@@ -1,6 +1,7 @@
 .step {
   h2 {
     color: #172b4d;
+    font-weight: bold;
   }
   .step-title {
     display: flex;
@@ -11,5 +12,8 @@
         color: red;
       }
     }
+  }
+  .step-content .sortable-group {
+    min-height: 1rem;;
   }
 }

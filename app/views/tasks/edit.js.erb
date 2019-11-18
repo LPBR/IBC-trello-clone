@@ -1,0 +1,4 @@
+$('#task_<%= @task.id %> p').replaceWith("<%= escape_javascript(render 'tasks/edit') %>");
+$('#task_<%= @task.id %> input').focusout(function () {
+  $('#task_<%= @task.id %> form').submit();
+});

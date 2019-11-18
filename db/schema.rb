@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_11_18_163037) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "content", null: false
+    t.integer "position"
     t.integer "step_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

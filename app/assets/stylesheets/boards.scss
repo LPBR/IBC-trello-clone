@@ -79,6 +79,8 @@
       background: #f2f2f2;
       border-radius: 5px;
       padding: 1rem;
+      overflow-y: auto;
+      max-height: calc(100vh - 150px);
       form {
         input {
           margin-bottom: .5rem;
@@ -98,4 +100,9 @@
       }
     }
   }
+}
+.ui-sortable-placeholder {
+  background-color: #e1e1e1 !important;
+  visibility: visible !important;
+  border-radius: 5px !important;
 }

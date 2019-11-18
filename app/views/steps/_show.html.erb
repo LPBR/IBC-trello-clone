@@ -7,7 +7,15 @@
       end %>
     </div>
     <div class='step-content'>
-
+      <div class='drop-target sortable-group' data-url="<%= sort_tasks_path(step.id) %>">
+        <% step.tasks.order(:position).each do |task| %>
+          <%= render partial: '/tasks/show', object: task, as: 'task', locals: { id: dom_id(task) } %>
+        <% end %>
+      </div>
+      <div class="add-task">
+        <%= fas_icon 'plus' %>
+        Adicionar uma Tarefa
+      </div>
     </div>
   </div>
 </div>

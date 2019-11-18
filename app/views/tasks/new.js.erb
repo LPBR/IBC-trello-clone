@@ -1,0 +1,7 @@
+var addTask = $('#step_<%= @task.step_id %> .add-task').clone(true);
+console.log($('#step_<%= @task.step_id %> .add-task'))
+$('#step_<%= @task.step_id %> .add-task').replaceWith("<%= escape_javascript(render 'tasks/new') %>");
+$('#step_<%= @task.step_id %> #task_content').focus();
+$('#step_<%= @task.step_id %> #task-close').click(function (event) {
+  $(event.currentTarget).parents('.task').replaceWith(addTask);
+});
