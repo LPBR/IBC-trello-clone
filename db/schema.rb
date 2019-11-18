@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_16_183342) do
+ActiveRecord::Schema.define(version: 2019_11_18_163037) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name", null: false
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2019_11_16_183342) do
     t.datetime "updated_at", null: false
     t.integer "position"
     t.index ["board_id"], name: "index_steps_on_board_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "content", null: false
+    t.integer "step_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_tasks_on_step_id"
   end
 
 end
