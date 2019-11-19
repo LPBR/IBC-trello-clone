@@ -4,6 +4,8 @@
 class Task < ApplicationRecord
   belongs_to :step
 
+  before_create :set_initial_task_position
+
   validates :content, presence: true
   validates :step, presence: true
 
