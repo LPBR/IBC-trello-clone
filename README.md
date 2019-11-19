@@ -1,6 +1,11 @@
 # IBC-Teste
 Teste IBC, uma lista de tarefas com funcionalidades semelhantes ao Trello. Funcionalidades para criação de quadros, etapas e tarefas. As etapas e tarefas podem ser reordenadas ao arrastar e soltar.
 
+[Demo ElasticBeanstalk](http://ibcteste.us-west-2.elasticbeanstalk.com/)  
+http://ibcteste.us-west-2.elasticbeanstalk.com/
+
+![Captura de Tela IBC-Teste](https://i.ibb.co/nPQYvgn/image.png)
+
 ## O teste:
 
 Criar uma app de TODO LIST simples (trello). Deverá ser entregue rodando na AWS (Free Tier) juntamente com todo o código no Github.
