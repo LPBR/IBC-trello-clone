@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'mini_racer', '~> 0.2.8'
 gem 'turbolinks', '~> 5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
