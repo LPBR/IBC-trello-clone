@@ -19,6 +19,8 @@ $(document).on 'turbolinks:load', ->
     board_id = $('.board-bar #id').val()
     $.get '/boards/'+board_id+'/edit'
 
+  $('.toast').toast('show')
+
   $('.steps-container').sortable(
     start: (e, ui) ->
         ui.placeholder.height(ui.item.height());
@@ -30,7 +32,6 @@ $(document).on 'turbolinks:load', ->
         data: data
   );
 
-    
   $('.step-content .sortable-group').sortable(
     items: '.task'
     connectWith: '.drop-target',
