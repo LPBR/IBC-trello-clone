@@ -37,11 +37,16 @@
 
     <div class="container">
       <% if alert %>
-        <div class="alert alert-<%= alert.keys[0] %> alert-dismissible fade show" role="alert">
-          <%= alert.values[0] %>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div style="position: absolute; top: 70px; right: 1rem; min-width: 280px; z-index: 100;">
+          <div class="toast fade show" data-autohide="true" data-delay="6000">
+            <div class="toast-header">
+              <strong class="mr-auto" style="<%= alert.keys[0] == 'success' ? 'color: green;' : 'color: red;' %>"><%= alert.keys[0] == 'success' ? "Sucesso" : "Erro" %></strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              <%= alert.values[0] %>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
