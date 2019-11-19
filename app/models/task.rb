@@ -12,7 +12,7 @@ class Task < ApplicationRecord
   private
 
   def set_initial_task_position
-    last_task = Task.where(step_id: step_id).order(:position).last
+    last_task = step.tasks.order(:position).last
     self.position = 0 if last_task.nil?
     self.position = last_task.position + 1 unless last_task.nil?
   end
