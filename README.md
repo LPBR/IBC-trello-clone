@@ -1,5 +1,5 @@
 # IBC-Teste
-Teste IBC, uma lista de tarefas com funcionalidades semelhantes ao Trello. Funcionalidades para criação de quadros, etapas e tarefas. As etapas e tarefas podem ser reordenadas ao arrastar e soltar.
+Teste IBC, uma lista de tarefas com funcionalidades semelhantes ao Trello. Funcionalidades para criação de quadros, etapas e tarefas. As etapas e tarefas podem ser modidas ao arrastar e soltar.
 
 ![Captura de Tela IBC-Teste](https://i.ibb.co/nPQYvgn/image.png)
 
